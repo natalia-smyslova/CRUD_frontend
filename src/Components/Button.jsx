@@ -1,22 +1,27 @@
-function Button({ element = null, icon, color, fontSize, callback = null }) {
+import PropTypes from 'prop-types';
+
+export default function Button({ icon, color, fontSize, element = null, callback = null }) {
     const styles = { color, fontSize };
     let classes;
-
+  
     switch (element) {
-        case 'footer':
-            classes = 'button button__footer';
-            break;
-        case 'header':
-            classes = 'button button__header';
-            break;
-        case 'note':
-            classes = 'button button__note';
-            break;
+      case 'note':
+        classes = "button button__note";
+        break;
+      case 'footer':
+        classes = "button button__footer";
+        break;
+      default:
+        classes = "button";
     }
+  
+    return <button className={classes} style={styles} onClick={callback}>{icon}</button>;
+  }
 
-    return (
-        <button className={classes} style={styles}>{icon}</button>
-    )
-}
-
-export default Button;
+  Button.propTypes = {
+    icon: PropTypes.string,
+    color: PropTypes.string,
+    fontSize: PropTypes.string,
+    element: PropTypes.string,
+    callback: PropTypes.any
+  }

@@ -19,25 +19,64 @@
 
 .button {
   padding: 8px 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
   background-color: #fff;
   border: 2px solid #444;
   border-radius: 50%;
   cursor: pointer;
-  line-height: 1;
+}
+
+.notes__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-top: 30px;
+  /* overflow-x: scroll; */
+  list-style-type: none;
+}
+
+.notes__item {
+  width: 300px;
+  min-width: 300px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.note {
+  position: relative;
+  padding: 16px;
+  border: 1px solid #000;
+}
+
+.button__note {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+.footer {
+  position: fixed;
+  width: 94%;
+  bottom: 24px;
+}
+
+.footer__title {
+  font-size: 18px;
+}
+
+.footer-wrapper {
+  display: flex;
 }
 
 .footer__text {
   margin-right: 16px;
   padding: 16px;
-  font-size: 1rem;
   border: 1px solid #000;
   resize: none;
 }
 
-.footer {
-  bottom: 24px;
+.button__footer {
+  align-self: end;
 }
-
-/* .footer__form{
-  display: flex;
-} */
