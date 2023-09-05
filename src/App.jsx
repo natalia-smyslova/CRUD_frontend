@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Button from './components/Button';
 import Note from './components/Note';
+import Button from './components/Button';
 
 export default function App() {
   const [notes, setNotes] = useState([]);
