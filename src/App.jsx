@@ -3,7 +3,7 @@ import './App.css';
 import Note from './components/Note';
 import Button from './components/Button';
 
-export default function App() {
+function App() {
   const [notes, setNotes] = useState([]);
   const [newNoteText, setNewNoteText] = useState('');
 
@@ -63,3 +63,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App
