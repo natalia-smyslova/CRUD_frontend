@@ -1,7 +1,7 @@
 import Button from './Button';
 import PropTypes from 'prop-types';
 
-export default function Note({ note, deleteNote }) {
+function Note({ note, deleteNote }) {
   return (
     <div className="note">
       <p className="note__text">{note.newNoteText}</p>
@@ -17,3 +17,5 @@ Note.propTypes = {
     newNoteText: PropTypes.string,
     id: PropTypes.string,
   }
+
+export default Note
